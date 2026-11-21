@@ -18,7 +18,8 @@ RAG_TREE = ROOT / "data/rag_data/tree.json"
 RAG_GRAPH = ROOT / "data/rag_data/graph.json"
 RAG_DB = Path(os.getenv("AIE_RAG_DB", str(ROOT / "data/rag_data/index.sqlite3")))
 RAG_DOCUMENT_IDS = ("lec01-main", "lec02-main", "lec03-main")
-RAG_TOP_K = 5
+# 第5回 宿題（基礎）: 環境変数 AIE_RAG_TOP_K で検索件数を変えて比べられるようにした（既定は 5）
+RAG_TOP_K = int(os.getenv("AIE_RAG_TOP_K", "5"))
 GRAPH_START_K = 3
 GRAPH_HOPS = 2
 GRAPH_MAX_RESULTS = 10
